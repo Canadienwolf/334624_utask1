@@ -9,9 +9,12 @@ public class ActivationPad : MonoBehaviour
     public GameObject door;
 
     private Renderer color;
+    private int triggerCount;
+    private float timeLeft = 5.0f;
 
     void Start()
     {
+        ChangeColorBlack();
         foreach (Transform child in transform)
         {
             if (child.tag == "TriggerPad")
@@ -19,7 +22,6 @@ public class ActivationPad : MonoBehaviour
                 triggers.Add(child.gameObject);
             }
         }
-
     }
 
     // Update is called once per frame
@@ -33,6 +35,11 @@ public class ActivationPad : MonoBehaviour
     {
         color = GetComponentInChildren<MeshRenderer>();
         color.material.color = Color.cyan;
+
+        triggerCount++;
+
+        StartTimer();
+
     }
 
     //OnTriggerEnter is called when an object leaves the trigger zone
@@ -41,6 +48,17 @@ public class ActivationPad : MonoBehaviour
 
     }
 
-    private void ChangeColorBlack;
+    //This function changes the colour back to the colour black
+    private void ChangeColorBlack()
+    {
+        color = GetComponentInChildren<MeshRenderer>();
+        color.material.color = Color.black;
+    }
+
+    
+    private void IEnumerator()
+    {
+
+    }
 
 }
