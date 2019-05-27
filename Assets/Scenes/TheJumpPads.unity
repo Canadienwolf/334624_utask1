@@ -511,7 +511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575809347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.874106, y: 2.790357, z: 3.562511}
+  m_LocalPosition: {x: 0.45, y: 2.790357, z: 36.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1079096252}
@@ -902,6 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aff13d0c5d0db743a7ae65d21c199ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggers: []
   door: {fileID: 0}
 --- !u!1 &1124056154
 GameObject:
@@ -1463,6 +1464,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8804395992075499701, guid: 67b954328d82fec4da2767890ae474db,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5c17a96f4a84fb429ae2fab305b60b5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67b954328d82fec4da2767890ae474db, type: 3}
 --- !u!4 &4996519482107894373 stripped
