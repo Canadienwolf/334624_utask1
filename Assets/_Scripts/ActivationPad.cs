@@ -38,7 +38,7 @@ public class ActivationPad : MonoBehaviour
 
         triggerCount++;
 
-        StartTimer();
+        //StartTimer();
 
     }
 
