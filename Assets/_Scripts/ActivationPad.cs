@@ -5,61 +5,18 @@ using UnityEngine;
 public class ActivationPad : MonoBehaviour
 {
 
-    public List<GameObject> triggers;
-    public GameObject door;
 
-    private Renderer color;
-    private int triggerCount;
-    private float timeLeft = 5.0f;
+    public int TriggerCount;
 
     void Start()
     {
-        ChangeColorBlack();
-        foreach (Transform child in transform)
-        {
-            if (child.tag == "TriggerPad")
-            {
-                triggers.Add(child.gameObject);
-            }
-        }
+       TriggerCount = GetComponentInParent<ActivationPadManager>().triggerCount;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    //OnTriggerEnter is called when an object enters the trigger zone
-    private void OnTriggerEnter()
-    {
-        color = GetComponentInChildren<MeshRenderer>();
-        color.material.color = Color.cyan;
-
-        triggerCount++;
-
-        //StartTimer();
-        //Coolstuff happens
-
-    }
-
-    //OnTriggerEnter is called when an object leaves the trigger zone
-    private void OnTriggerExit()
-    {
-
-    }
-
-    //This function changes the colour back to the colour black
-    private void ChangeColorBlack()
-    {
-        color = GetComponentInChildren<MeshRenderer>();
-        color.material.color = Color.black;
+        TriggerCount++;
     }
 
     
-    private void IEnumerator()
-    {
-
-    }
-
 }
