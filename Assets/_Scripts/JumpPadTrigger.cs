@@ -28,4 +28,10 @@ public class JumpPadTrigger : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter()
+    {
+
+    }
+
 }
