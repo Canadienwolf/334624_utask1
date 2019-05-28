@@ -8,13 +8,12 @@ public class ActivationPadManager : MonoBehaviour
     public List<GameObject> triggers;
     public GameObject door;
 
-    private Renderer color;
     public int triggerCount;
 
 
     void Start()
     {
-        ChangeColorBlack();
+        
         foreach (Transform child in transform)
         {
             if (child.tag == "TriggerPad")
@@ -31,12 +30,12 @@ public class ActivationPadManager : MonoBehaviour
         {
             Debug.Log(triggerCount);
         }
+
+        triggerCount = gameObject.GetComponent<ActivationPad>().TriggerCount;
+
     }
+
+
     
-    //This function changes the colour back to the colour black
-    private void ChangeColorBlack()
-    {
-        color = GetComponentInChildren<MeshRenderer>();
-        color.material.color = Color.black;
-    }
+    
 }
