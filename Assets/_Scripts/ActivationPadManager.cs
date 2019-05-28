@@ -5,9 +5,10 @@ using UnityEngine;
 public class ActivationPadManager : MonoBehaviour
 {
 
+    private float timer = 5.0f;
+
     public List<GameObject> triggers;
     public GameObject door;
-
     public int triggerCount;
 
 
@@ -26,13 +27,26 @@ public class ActivationPadManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (triggerCount > 0)
+        for (int i = 0; i < triggers.Count ; i++)
         {
-            Debug.Log(triggerCount);
+            if (triggers[i].GetComponent<ActivationPad>().TriggerCount)
+            {
+                triggerCount++;
+            }
         }
 
-        triggerCount = gameObject.GetComponent<ActivationPad>().TriggerCount;
+        if (triggerCount == triggers.Count)
+        {
+            door.SetActive (false); 
+            Invoke("instantiateDoor", timer);
+        }
 
+        triggerCount = 0;
+    }
+
+    private void instantiateDoor()
+    {
+        door.SetActive(true);
     }
 
 

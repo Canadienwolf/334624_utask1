@@ -5,19 +5,27 @@ using UnityEngine;
 public class ActivationPad : MonoBehaviour
 {
 
-    public int TriggerCount;
+    public bool TriggerCount;
 
     private Renderer color;
+    private float timer = 5.0f;
 
     void Start()
     {
-        
+        color = GetComponentInChildren<MeshRenderer>();
+        color.material.color = Color.gray;
     }
 
     private void OnTriggerEnter(Collider collider)
     {
         ChangeColorBlack();
-        TriggerCount++;
+
+        TriggerCount = true;
+    }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        Invoke("resetTimer", timer);
     }
 
     //This function changes the colour back to the colour black
@@ -27,6 +35,12 @@ public class ActivationPad : MonoBehaviour
         color.material.color = Color.cyan;
     }
 
+    private void resetTimer()
+    {
+        TriggerCount = false;
+
+        color.material.color = Color.gray;
+    }
 
 }
 
