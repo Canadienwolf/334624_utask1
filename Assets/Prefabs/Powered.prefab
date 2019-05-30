@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stor tekst
+  m_Text: Powered
 --- !u!1 &849550931
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3637896300354394925}
   m_Layer: 0
-  m_Name: Sign
+  m_Name: Powered
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
