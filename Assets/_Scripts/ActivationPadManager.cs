@@ -28,7 +28,8 @@ public class ActivationPadManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Checks if the amount of triggers that us activated is the same as TriggerCount. If it is the same, it will run the code that is contained within the for statement.
+        //Loops through all the triggers and checks if each trigger is activated
+        //If it is, add one to the trigger count
         for (int i = 0; i < triggers.Count ; i++)
         {
             if (triggers[i].GetComponent<ActivationPad>().TriggerCount)
