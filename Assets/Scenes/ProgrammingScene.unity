@@ -690,6 +690,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7517316195467403249, guid: f2e62c93e3cf98a48989be1fed42ff06,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e62c93e3cf98a48989be1fed42ff06, type: 3}
 --- !u!4 &877972310 stripped
@@ -1223,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1277,7 +1282,7 @@ GameObject:
   - component: {fileID: 2128239497}
   - component: {fileID: 2128239496}
   m_Layer: 0
-  m_Name: TriggerDouble (2)
+  m_Name: Switch
   m_TagString: TriggerPad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1310,6 +1315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpPad: {fileID: 877972311}
+  TriggerCount: 0
 --- !u!65 &2128239497
 BoxCollider:
   m_ObjectHideFlags: 0

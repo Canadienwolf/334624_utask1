@@ -45,6 +45,8 @@ public class JumpPadTrigger_01 : MonoBehaviour
         {
             //Here it tells that the gameobject is not airborne anymore and thereby turns of the command that is happening when the gameobject is airborn
             isAirborne = false;
+
+            GameObject.FindGameObjectWithTag("Player").GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = true;
         }
     }
 
@@ -58,6 +60,8 @@ public class JumpPadTrigger_01 : MonoBehaviour
 
         //Here it turns the bool to true and tells the code that the gameobject is now airborne, and thereby triggers the if airborne command
         isAirborne = true;
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent <UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = false;
 
     }
 
