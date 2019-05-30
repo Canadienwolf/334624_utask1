@@ -6,7 +6,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class BasicJumpPad : MonoBehaviour
 {
     private float upForce = 500.0f;
-    private float forwardForce = 250.0f;
+    private float forwardForce = 280.0f;
 
     void OnTriggerEnter (Collider collider)
     {

@@ -74,4 +74,10 @@ public class Timer : MonoBehaviour
         
         player.GetComponent<ThirdPersonUserControl>().enabled = true;
     }
+
+    public void stopTimer()
+    {
+        timerStart = false;
+    }
+
 }

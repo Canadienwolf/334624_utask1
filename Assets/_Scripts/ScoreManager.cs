@@ -5,13 +5,14 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class ScoreManager : MonoBehaviour
 {
-
-    Timer timer;
+    public GameObject Canvas;
+    public Timer timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = gameObject.GetComponent<Timer>();
+        //new WaitForSeconds(2);
+        //timer = gameObject.GetComponent<Timer>();
 
     }
 
@@ -23,6 +24,6 @@ public class ScoreManager : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        timer.timerStart = false;
+        timer = Canvas.GetComponentInChildren<Timer>().timerStart;
     }
 }

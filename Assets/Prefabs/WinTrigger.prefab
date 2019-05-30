@@ -105,4 +105,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b217c07dce9bb4985b461033b1e054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerStart: 0
+  Canvas: {fileID: 5171928006388332490, guid: a09e2776c8093da43aef051bc7729012, type: 3}
+  timer: {fileID: 0}
