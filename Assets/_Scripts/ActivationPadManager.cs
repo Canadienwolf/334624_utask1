@@ -15,6 +15,7 @@ public class ActivationPadManager : MonoBehaviour
     void Start()
     {
         
+        //If it find something that is a child of the gameobject that has the tag TriggerPad, put it into a list.
         foreach (Transform child in transform)
         {
             if (child.tag == "TriggerPad")
@@ -27,25 +28,34 @@ public class ActivationPadManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checks if the amount of triggers that us activated is the same as TriggerCount. If it is the same, it will run the code that is contained within the for statement.
         for (int i = 0; i < triggers.Count ; i++)
         {
             if (triggers[i].GetComponent<ActivationPad>().TriggerCount)
             {
+                //Add one 1 more to the triggerCount.
                 triggerCount++;
             }
         }
 
+        //if the triggerCount is the same as triggers.Count then run the command contained within the if statement.
         if (triggerCount == triggers.Count)
         {
-            door.SetActive (false); 
+            //Deactivates the gameobject that is linked to door.
+            door.SetActive (false);
+
+            //Runs the instantiateDoor command and also starts the timer.
             Invoke("instantiateDoor", timer);
         }
 
+        //Changes the value of triggerCount back to 0.
         triggerCount = 0;
     }
 
+    //private command that is contained within this script which is called "instantiateDoor".
     private void instantiateDoor()
     {
+        //Activates the gameobject that is linked to door.
         door.SetActive(true);
     }
 
