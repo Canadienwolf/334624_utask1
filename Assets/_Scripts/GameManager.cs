@@ -19,6 +19,23 @@ public class GameManager : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Level_Select");
     }
+
+    public void startLevel_1()
+    {
+        SceneManager.LoadScene("Level_1");
+    }
+
+    public void startLevel_2()
+    {
+        SceneManager.LoadScene("Level_2");
+    }
+
+    public void startLevel_3()
+    {
+        SceneManager.LoadScene("Level_3");
+    }
+
+
 }

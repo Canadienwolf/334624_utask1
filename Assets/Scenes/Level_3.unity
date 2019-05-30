@@ -250,7 +250,8 @@ MonoBehaviour:
     type: 3}
   winTrigger: {fileID: 1081563175890414801, guid: cf89ecf6523c9a64c93dc5e9122be0f0,
     type: 3}
-  level: 1
+  canvas: {fileID: 5171928006388332490, guid: a09e2776c8093da43aef051bc7729012, type: 3}
+  level: 3
 --- !u!4 &1533845626
 Transform:
   m_ObjectHideFlags: 0

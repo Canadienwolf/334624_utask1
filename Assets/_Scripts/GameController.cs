@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject doorTrack, jumpTrack, playerPrefab, playerCamera, winTrigger;
+    public GameObject doorTrack, jumpTrack, playerPrefab, playerCamera, winTrigger, canvas;
 
     public int level;
 
@@ -61,6 +61,9 @@ public class GameController : MonoBehaviour
                     //instantiate the player and the camera at location (0, 1, -10). This is done to fit the length/ position of the track.
                     Instantiate(playerPrefab, new Vector3(0, 1, -10), Quaternion.identity);
                     Instantiate(playerCamera, new Vector3(0, 1, -10), Quaternion.identity);
+
+                    //Creates the canvas that contains the timers and highscore.
+                    Instantiate(canvas);
                 }
                 else
                 {
@@ -88,6 +91,9 @@ public class GameController : MonoBehaviour
                     //instantiate the player and the camera at location (0, 1, -35). This is done to fit the length/ position of the track.
                     Instantiate(playerPrefab, new Vector3(0, 1, -35), Quaternion.identity);
                     Instantiate(playerCamera, new Vector3(0, 1, -35), Quaternion.identity);
+
+                    //Creates the canvas that contains the timers and highscore.
+                    Instantiate(canvas);
                 }
                 else
                 {
