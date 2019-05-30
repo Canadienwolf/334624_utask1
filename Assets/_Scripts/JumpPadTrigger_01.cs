@@ -13,7 +13,7 @@ public class JumpPadTrigger_01 : MonoBehaviour
     private float journeyLength;
     private bool isAirborne;
     private GameObject player;
-    private Renderer color;
+    private MeshRenderer color;
 
     // Start is called before the first frame update
     void Start()

@@ -8,17 +8,17 @@ public class SwitchJumpPads : MonoBehaviour
     public GameObject JumpPad;
     public bool TriggerCount;
 
-    private Renderer color;
+    private MeshRenderer color;
     private float timer = 5.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         //Tells the script to find a script called "JumpPadTrigger_01 in the gameobject called "A" and deactivate it. 
-        GameObject.Find("A").GetComponent<JumpPadTrigger_01>().enabled = false;
+        JumpPad.GetComponent<JumpPadTrigger_01>().enabled = false;
 
         //Tells the script to find a script called "BoxCollider in the gameobject called "A" and deactivate it. 
-        GameObject.Find("A").GetComponent<BoxCollider>().enabled = false;
+        JumpPad.GetComponent<BoxCollider>().enabled = false;
 
         //Get's the componnet called MeshRenderer in the children.
         color = GetComponentInChildren<MeshRenderer>();
@@ -35,10 +35,10 @@ public class SwitchJumpPads : MonoBehaviour
         ChangeColorBlack();
 
         //Tells the script to find a script called "JumpPadTrigger_01 in the gameobject called "A" and activate it. 
-        GameObject.Find("A").GetComponent<JumpPadTrigger_01>().enabled = true;
+        JumpPad.GetComponent<JumpPadTrigger_01>().enabled = true;
 
         //Tells the script to find a script called "BoxCollider in the gameobject called "A" and activate it.
-        GameObject.Find("A").GetComponent<BoxCollider>().enabled = true;
+        JumpPad.GetComponent<BoxCollider>().enabled = true;
 
         //Tells the script that it should set the "TriggerCount" bool to true.
         TriggerCount = true;
@@ -65,10 +65,10 @@ public class SwitchJumpPads : MonoBehaviour
         TriggerCount = false;
 
         //Tells the script to find a script called "JumpPadTrigger_01 in the gameobject called "A" and deactivate it.
-        GameObject.Find("A").GetComponent<JumpPadTrigger_01>().enabled = false;
+        JumpPad.GetComponent<JumpPadTrigger_01>().enabled = false;
 
         //Tells the script to find a script called "BoxCollider in the gameobject called "A" and deactivate it.
-        GameObject.Find("A").GetComponent<BoxCollider>().enabled = false;
+        JumpPad.GetComponent<BoxCollider>().enabled = false;
 
         //Changes the value in the mesh renderer to the values that makes up the color gray.
         color.material.color = Color.gray;
