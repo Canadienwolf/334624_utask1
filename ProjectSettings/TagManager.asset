@@ -8,6 +8,7 @@ TagManager:
   - Fire
   - JumpPad
   - WinTrigger
+  - Death
   layers:
   - Default
   - TransparentFX
