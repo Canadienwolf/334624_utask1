@@ -71,7 +71,7 @@ public class Timer : MonoBehaviour
         yield return new WaitForSeconds(1);
         timerStart = true;
 
+        
         player.GetComponent<ThirdPersonUserControl>().enabled = true;
     }
-
 }
