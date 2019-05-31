@@ -10,6 +10,7 @@ public class BasicJumpPad : MonoBehaviour
 
     void OnTriggerEnter (Collider collider)
     {
+        //Checks if the collider that is coming into contact with trigger has the tag "Player"
         if (collider.tag == "Player")
         {
             //Add force upwards and forward when a gameobject enter the trigger zone, the force up and forward are decided by two private floats.

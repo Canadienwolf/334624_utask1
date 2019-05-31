@@ -9,6 +9,8 @@ TagManager:
   - JumpPad
   - WinTrigger
   - Death
+  - Canvas
+  - Timer
   layers:
   - Default
   - TransparentFX

@@ -5,25 +5,16 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class ScoreManager : MonoBehaviour
 {
-    public GameObject Canvas;
-    public Timer timer;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //new WaitForSeconds(2);
-        //timer = gameObject.GetComponent<Timer>();
 
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
+        //Find the gameobject called "Timer" and then finds the Script called "Timer". And then it finds and runs the commad stopTimer.
+        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().stopTimer();
 
-    void OnTriggerEnter(Collider collider)
-    {
-        //timer = Canvas.GetComponentInChildren<Timer>().timerStart;
     }
 }

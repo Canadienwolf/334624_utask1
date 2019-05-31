@@ -1,6 +1,6 @@
 
 
-
+Task 6:
 
 Double trigger platforms with door:
 I added in two cubes that i am using as the jum pads, they start out with the color of gray
@@ -18,3 +18,17 @@ JumpPadsManual:
 When i made the manual jump pad, i used a pressure pad like with the door. When this pad is active, then it will activate the scripts that carries you over to the next platform.
 But if you wait for too long, then this platform will deactivate and you will have to go and activate the pressure plate again.
 Else the script will not be told to carry you over to the next platform.
+
+Task 7:
+
+Here i made two prefabs of the different track types. One with the jumping pads and one with the door with triggers. Then i place it into a script
+spawned them randomly until we had the correct amount of tracks. Like lvl 1 having 10 and lvl 3 having 50.
+Also made it procedural generating so we could potentially go a lot further also if wanted. Also made it so that it is possible to place in
+different platforms if we should wish to.
+
+Tried making a highscore by using PlayerPrefs, but was able to create it in the time before the delivery. 
+
+I deactivated the player controllers as the 3 - 2 - 1 GO! counter was running with a coroutine. 
+
+Also when the tracks are spawned they are spawned with some space between them so that you have to use the jumping pads to get over to the next
+track.
