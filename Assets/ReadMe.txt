@@ -26,7 +26,7 @@ spawned them randomly until we had the correct amount of tracks. Like lvl 1 havi
 Also made it procedural generating so we could potentially go a lot further also if wanted. Also made it so that it is possible to place in
 different platforms if we should wish to.
 
-Tried making a highscore by using PlayerPrefs, but was able to create it in the time before the delivery. 
+Tried making a highscore by using PlayerPrefs, but was unable to create it in the time before the delivery. 
 
 I deactivated the player controllers as the 3 - 2 - 1 GO! counter was running with a coroutine. 
 
