@@ -24,6 +24,6 @@ public class ScoreManager : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        timer = Canvas.GetComponentInChildren<Timer>().timerStart;
+        //timer = Canvas.GetComponentInChildren<Timer>().timerStart;
     }
 }
