@@ -54,14 +54,14 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //if timer is active, then start the command called UpdateTimerUI
         if (timerStart == true)
         {
             UpdateTimerUI();
             
         }
 
-
+        //Says that score should be the same as minuteCount + secondsCount;
         score = minuteCount + secondsCount;
 
         GameObject.Find("Highscore (1)").GetComponent<Text>().text = score.ToString();
@@ -72,6 +72,8 @@ public class Timer : MonoBehaviour
     {
         secondsCount += Time.deltaTime;
         timerText.text = minuteCount + "m:" + (int)secondsCount + "s";
+
+        //Says that is there is 60 seconds in the timer, it should change to one minute and make the second counter go back to 0 again.
         if (secondsCount >= 60)
         {
             minuteCount++;
@@ -94,7 +96,7 @@ public class Timer : MonoBehaviour
         yield return new WaitForSeconds(1);
         timerStart = true;
 
-        
+        //Enables the ThirdPersonUseControl script on the player again
         player.GetComponent<ThirdPersonUserControl>().enabled = true;
     }
 
@@ -119,6 +121,7 @@ public class Timer : MonoBehaviour
             GameObject.Find("ScoreSaver").GetComponent<Highscores>().highscore3 = score;
         }
 
+        //here we tried to make the PlayerPrefs for storing the highscores for the playthroughs, but were unsuccessful at doing this.
         /*if (PlayerPrefs.GetFloat("HighScoreLevel_1") >= score)
         {
             PlayerPrefs.SetString("HighScoreLevel_1", score.ToString());
@@ -141,13 +144,14 @@ public class Timer : MonoBehaviour
         }
         */
 
+        ///Tells the game to run a command called ReturnToMainMenu.
         StartCoroutine(ReturnToMainMenu());
         
     }
 
     IEnumerator ReturnToMainMenu()
     {
-        Debug.Log("ReturningToSpace");
+        //Tells the game to wait for 3 seconds before returning the game to the mainscene.
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("MainScene");
     }
